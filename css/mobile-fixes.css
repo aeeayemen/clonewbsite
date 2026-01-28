@@ -76,6 +76,15 @@
         margin-top: 30px;
     }
 
+    /* Extra margin for About page */
+    .about-welcome-text {
+        margin-top: 80px !important;
+    }
+
+    .about-heading {
+        margin-top: 20px !important;
+    }
+
     .team-section .row {
         flex-direction: column;
         text-align: center;

@@ -731,9 +731,9 @@ body {
 
 @media only screen and (max-width: 1679px) and (min-width: 1025px) {
     .hero-title-massive {
-    display: flex;
-    align-items: center;
-} */
+        font-size: 80px; /* Adjusted for laptop */
+    }
+}
 
 h1,
 h2,

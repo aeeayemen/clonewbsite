@@ -1,23 +1,22 @@
-/* Fix Navbar Toggler */
-.navbar-toggler {
-    display: block !important;
-    border: 2px solid #333 !important;
-    padding: 8px 12px !important;
-    z-index: 1050;
-    background-color: #fff !important;
-}
-
-.navbar-toggler-icon {
-    display: block !important;
-    width: 24px !important;
-    height: 24px !important;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-}
-
-/* Mobile Responsiveness */
+/* Navbar Toggler - Only show on mobile */
 @media (max-width: 991px) {
+    .navbar-toggler {
+        display: block !important;
+        border: 2px solid #333 !important;
+        padding: 8px 12px !important;
+        z-index: 1050;
+        background-color: #fff !important;
+    }
+
+    .navbar-toggler-icon {
+        display: block !important;
+        width: 24px !important;
+        height: 24px !important;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
+
     .hero-title-massive {
         font-size: 50px;
     }
@@ -49,5 +48,97 @@
 
     .journey-header-card {
         margin-bottom: 20px;
+    }
+
+    /* Section spacing on mobile */
+    section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        margin-bottom: 20px;
+    }
+
+    .py-5 {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .investors-journey {
+        padding: 40px 0 !important;
+    }
+
+    .platforms-section {
+        padding: 40px 0 !important;
+    }
+
+    .team-section {
+        margin: 30px 0 !important;
+        padding: 40px 20px !important;
+    }
+
+    .partners-section {
+        padding: 30px 0 !important;
+    }
+
+    /* Footer centered on mobile */
+    footer {
+        padding: 40px 0 !important;
+        text-align: center !important;
+    }
+
+    footer .row {
+        justify-content: center !important;
+    }
+
+    footer .col-lg-2,
+    footer .col-lg-3,
+    footer .col-lg-4 {
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+
+    footer .footer-links {
+        text-align: center !important;
+    }
+
+    footer .footer-links ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .d-flex {
+        justify-content: center !important;
+    }
+
+    footer .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Cards spacing */
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    .journey-step {
+        margin-bottom: 30px;
+    }
+
+    .platform-item {
+        margin-bottom: 25px;
+    }
+
+    /* Row gaps */
+    .row {
+        row-gap: 20px;
+    }
+}
+
+/* Hide toggler on desktop */
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
     }
 }

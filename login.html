@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Basmet Etmam</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .login-section {
+            padding: 80px 0 120px;
+        }
+        .login-panel,
+        .register-panel {
+            padding: 40px;
+        }
+        .panel-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-group label .required {
+            color: #e74c3c;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #4B067D;
+        }
+        .password-wrapper {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .remember-me input {
+            margin-right: 8px;
+        }
+        .remember-me label {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+        }
+        .btn-login,
+        .btn-register {
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 10px 30px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-login:hover,
+        .btn-register:hover {
+            background-color: #4B067D;
+            color: #fff;
+            border-color: #4B067D;
+        }
+        .lost-password {
+            margin-top: 15px;
+        }
+        .lost-password a {
+            color: #00a0d2;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .lost-password a:hover {
+            text-decoration: underline;
+        }
+        .register-info {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .register-info a {
+            color: #4B067D;
+        }
+        .divider {
+            border-right: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header fixed-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Basmet Etmam" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Packages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="packagesDropdown">
+                            <li><a class="dropdown-item " href="hr-packages.html">Human Resources Services</a></li>
+                            <li><a class="dropdown-item" href="financial-management.html">Financial Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="service-registration.html">Service Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div style="height: 100px;"></div>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="row">
+                <!-- Login Panel -->
+                <div class="col-lg-6 divider" data-aos="fade-right">
+                    <div class="login-panel">
+                        <h2 class="panel-heading">Login</h2>
+                        <form>
+                            <div class="form-group">
+                                <label>Username or email address <span class="required">*</span></label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password <span class="required">*</span></label>
+                                <div class="password-wrapper">
+                                    <input type="password" id="login-password" required>
+                                    <i class="fas fa-eye-slash password-toggle" onclick="togglePassword('login-password', this)"></i>
+                                </div>
+                            </div>
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn-login">Log in</button>
+                            <div class="lost-password">
+                                <a href="#">Lost your password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Register Panel -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="register-panel">
+                        <h2 class="panel-heading">Register</h2>
+                        <form>
+                            <div class="form-group">
+                                <label>Email address <span class="required">*</span></label>
+                                <input type="email" required>
+                            </div>
+                            <div class="register-info">
+                                A link to set a new password will be sent to your email address.
+                            </div>
+                            <div class="register-info">
+                                Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#">privacy policy</a>.
+                            </div>
+                            <button type="submit" class="btn-register">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" data-aos="fade-up">
+                    <img src="images/logo.png" alt="Basmet Etmam" class="footer-logo">
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="service-registration.html">Service Registration</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="footer-links">
+                        <h5>Packages</h5>
+                        <ul>
+                            <li><a href="#">Human Resources</a></li>
+                            <li><a href="#">Financial Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="footer-links">
+                        <h5>Join Our Newsletter</h5>
+                        <p style="font-size: 12px; color: #666;">Sign Up For Our Newsletter</p>
+                        <form class="newsletter-form d-flex gap-2">
+                            <input type="email" placeholder="Email Address">
+                            <button type="submit" class="newsletter-btn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-4 border-top" data-aos="fade-up">
+                <p style="font-size: 12px; color: #999;">&copy; 2025 Basmet Etmam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+    </script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            }
+        }
+    </script>
+</body>
+</html>

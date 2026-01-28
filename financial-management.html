@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Management Packages - Basmet Etmam</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+        }
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #4B067D;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .title-underline {
+            width: 60px;
+            height: 3px;
+            background-color: #4B067D;
+            margin-bottom: 20px;
+        }
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .side-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+        .side-text span {
+            color: #E5891F;
+        }
+        .office-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #2d5a3d 0%, #1a3a25 100%);
+        }
+        .office-image-placeholder {
+            width: 100%;
+            height: 280px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #2d5a3d 0%, #1a3a25 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Package Section Styles */
+        .package-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .package-section:last-of-type {
+            border-bottom: none;
+        }
+        .package-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4B067D;
+            margin-bottom: 20px;
+        }
+        .package-btn {
+            background-color: #4B067D;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            display: inline-block;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .package-btn:hover {
+            background-color: #E5891F;
+            color: #fff;
+        }
+        .package-number {
+            font-size: 16px;
+            font-weight: 600;
+            color: #4B067D;
+            margin-bottom: 15px;
+        }
+        .package-desc {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.7;
+        }
+        .vertical-line {
+            width: 2px;
+            background-color: #E5891F;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .package-content-left {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .cta-title {
+            font-size: 32px;
+            font-weight: 700;
+            font-style: italic;
+            color: #B8A1D6;
+            margin-bottom: 5px;
+        }
+        .cta-subtitle {
+            font-size: 32px;
+            font-weight: 700;
+            font-style: italic;
+            color: #4B067D;
+            margin-bottom: 40px;
+        }
+        .submit-btn-cta {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px 40px;
+            border-radius: 50px;
+            color: #666;
+            font-size: 14px;
+        }
+        .follow-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .follow-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #4B067D;
+            margin-bottom: 20px;
+        }
+        .social-icons-page a {
+            color: #4B067D;
+            font-size: 20px;
+            margin: 0 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header fixed-top shadow-sm">
+         <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Basmet Etmam" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link " href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html" data-i18n="nav_about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="nav_services">Services</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_packages">
+                            Packages
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="packagesDropdown">
+                            <li><a class="dropdown-item" href="hr-packages.html">Human Resources Services</a></li>
+                            <li><a class="dropdown-item " href="financial-management.html">Financial Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link " href="service-registration.html" data-i18n="nav_service_registration">Service Registration</a></li>
+                    <li class="nav-item"><a class="nav-link " href="contact-us.html" data-i18n="nav_contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html" data-i18n="nav_login">Login</a></li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h1 class="page-title">Financial Management Packages</h1>
+                    <div class="title-underline"></div>
+                    <p class="intro-text">
+                        Believing That Proper Financial Management – Starting From Feasibility Studies To Data And Financial Report Analysis – Is The Primary Indicator That Draws Attention When Making Or Reversing Decisions Regarding A Company, Its Expansion, And Administrative Resolutions.
+                    </p>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+                    <p class="side-text mb-4">
+                        <span>And</span> In Support Of Our Investor And Entrepreneur Clients, We Have Provided Financial Management Packages For Companies As Follows:
+                    </p>
+                    <div class="office-image-placeholder" style="background: none; padding: 0;">
+                        <img src="images/financial-bg.png" alt="Financial Management" class="office-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platinum Package -->
+    <section class="package-section">
+        <div class="container">
+            <div class="row align-items-start" data-aos="fade-up">
+                <div class="col-lg-3">
+                    <h3 class="package-name">Platinum Package</h3>
+                    <a href="#" class="package-btn">KNOW MORE DETAILS</a>
+                </div>
+                <div class="col-lg-4">
+                    <div class="package-content-left">
+                        <div class="vertical-line"></div>
+                        <div class="package-number">01</div>
+                        <p class="package-desc">
+                            The Platinum Package Is Your Simplest Path To Financial Clarity. It Provides You With The Needed Reports That Reveal Where Your Business Stands So You Can Move Forward With Confidence In The Market. This Package Helps You Lay A Clean, Steady
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1">
+                    <div class="package-number">02</div>
+                    <p class="package-desc">
+                        Perfect For Startups And Small Businesses With Straightforward Finances.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Silver Package -->
+    <section class="package-section">
+        <div class="container">
+            <div class="row align-items-start" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-3">
+                    <h3 class="package-name">Silver Package</h3>
+                    <a href="#" class="package-btn">KNOW MORE DETAILS</a>
+                </div>
+                <div class="col-lg-4">
+                    <div class="package-content-left">
+                        <div class="vertical-line"></div>
+                        <div class="package-number">01</div>
+                        <p class="package-desc">
+                            The Silver Package Gives Your Business The Smartest Tools To Grow With Confidence. Starting From Financial Reports To Accurate Performance Tracking, Every Detail Is Designed Around Your Unique Operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1">
+                    <div class="package-number">02</div>
+                    <p class="package-desc">
+                        Ideal For Businesses In A Growth Phase, Ready To Stay Balanced, Make Informed Decisions, And Build A More Powerful Financial Strategy For What's Next.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Golden Package -->
+    <section class="package-section">
+        <div class="container">
+            <div class="row align-items-start" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-3">
+                    <h3 class="package-name">Golden Package</h3>
+                    <a href="#" class="package-btn">KNOW MORE DETAILS</a>
+                </div>
+                <div class="col-lg-4">
+                    <div class="package-content-left">
+                        <div class="vertical-line"></div>
+                        <div class="package-number">01</div>
+                        <p class="package-desc">
+                            The Golden Package, The Ultimate Solution For The Highest Level Of Financial Management. It Offers All Ensures You Can Make Strategic Decisions With Confidence.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1">
+                    <div class="package-number">02</div>
+                    <p class="package-desc">
+                        Perfect For Companies Aiming To Grow Stronger In Diverse Markets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Your Trusted Partner In</h2>
+            <h3 class="cta-subtitle">Your Investment Journey</h3>
+            
+            <div class="mb-5">
+                <button class="submit-btn-cta">Submit</button>
+            </div>
+            
+            <div class="follow-section">
+                <h4 class="follow-title">Follow Us</h4>
+                <div class="social-icons-page">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" data-aos="fade-up">
+                    <img src="images/logo.png" alt="Basmet Etmam" class="footer-logo">
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Home</a></li>
+                            <li><a href="about-us.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>About Us</a></li>
+                            <li><a href="services.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Services</a></li>
+                            <li><a href="service-registration.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Service Registration</a></li>
+                            <li><a href="contact-us.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="footer-links">
+                        <h5>Packages</h5>
+                        <ul>
+                            <li><a href="hr-packages.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Human Resources</a></li>
+                            <li><a href="financial-management.html"><i class="fas fa-circle" style="font-size: 6px; margin-right: 8px; color: #4B067D;"></i>Financial Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="footer-links">
+                        <h5>Join Our Newsletter</h5>
+                        <p style="font-size: 12px; color: #666;">Sign Up For Our Newsletter</p>
+                        <form class="newsletter-form d-flex gap-2">
+                            <input type="email" placeholder="Email Address">
+                            <button type="submit" class="newsletter-btn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-4 border-top" data-aos="fade-up">
+                <p style="font-size: 12px; color: #999;"><img src="https://fpcsolution.net/wp-content/plugins/sitepress-multilingual-cms/res/flags/ar.svg" width="16"> العربية (Arabic)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+    </script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

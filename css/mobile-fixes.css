@@ -1,5 +1,35 @@
 /* Navbar Toggler - Only show on mobile */
 @media (max-width: 991px) {
+
+    /* Prevent horizontal scroll */
+    html,
+    body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        row-gap: 20px;
+    }
+
+    section {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        margin-bottom: 20px;
+    }
+
     .navbar-toggler {
         display: block !important;
         border: 2px solid #333 !important;
@@ -28,6 +58,8 @@
     .hero-section {
         text-align: center;
         padding-top: 120px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
         flex-direction: column;
     }
 
@@ -47,13 +79,6 @@
     }
 
     .journey-header-card {
-        margin-bottom: 20px;
-    }
-
-    /* Section spacing on mobile */
-    section {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
         margin-bottom: 20px;
     }
 
@@ -128,11 +153,6 @@
 
     .platform-item {
         margin-bottom: 25px;
-    }
-
-    /* Row gaps */
-    .row {
-        row-gap: 20px;
     }
 }
 

@@ -1,0 +1,53 @@
+/* Fix Navbar Toggler */
+.navbar-toggler {
+    display: block !important;
+    border: 2px solid #333 !important;
+    padding: 8px 12px !important;
+    z-index: 1050;
+    background-color: #fff !important;
+}
+
+.navbar-toggler-icon {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .hero-title-massive {
+        font-size: 50px;
+    }
+
+    .hero-brand-medium {
+        font-size: 40px;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding-top: 120px !important;
+        flex-direction: column;
+    }
+
+    .hero-side-text {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .team-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-section .col-lg-4 {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .journey-header-card {
+        margin-bottom: 20px;
+    }
+}

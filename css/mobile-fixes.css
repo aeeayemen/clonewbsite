@@ -55,12 +55,20 @@
         font-size: 40px;
     }
 
+    /* Header to Hero margin */
     .hero-section {
         text-align: center;
-        padding-top: 120px !important;
+        padding-top: 40px !important;
         padding-left: 15px !important;
         padding-right: 15px !important;
         flex-direction: column;
+        margin-top: 120px !important;
+    }
+
+    /* First section after header for all pages */
+    header+section,
+    .site-header+section {
+        margin-top: 120px !important;
     }
 
     .hero-side-text {

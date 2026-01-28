@@ -63,6 +63,15 @@ a {
 
 
 
+
+
+/* Ensure content is not hidden behind fixed header */
+.hero-section,
+header + section,
+.site-header + section {
+    margin-top: 140px;
+}
+
 .hero-brand-small {
     font-family: var(--font-primary);
     font-size: 20px;
